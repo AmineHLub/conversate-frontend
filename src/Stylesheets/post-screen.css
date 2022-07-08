@@ -1,0 +1,59 @@
+.post-fixed-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100vh;
+  color: white;
+  background-color: hsl(218deg 23% 26%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post-fixed-container h2 {
+  margin: auto;
+}
+
+.post-fixed-container div.direct-cmnt-container {
+  height: 30%;
+  width: 100%;
+  border-top: 2px dotted hsl(0, 0%, 100%);
+  box-sizing: border-box;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.direct-cmnt-container textarea {
+  box-sizing: border-box;
+  padding: 5px 7px;
+  width: 100%;
+  height: 95px;
+  resize: none;
+  border: none;
+  border-radius: 6px;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 10px;
+}
+
+.direct-cmnt-container textarea:focus {
+  outline: 1px solid hsl(150, 100%, 46%);
+}
+
+.splash-btn.dirct-cmnt {
+  align-self: flex-end;
+  margin-bottom: 0;
+}
+
+.comments-container {
+  position: absolute;
+  top: 0;
+  left: 40%;
+  right: 0;
+  height: 200vh;
+  box-sizing: border-box;
+  padding: 20px;
+}
