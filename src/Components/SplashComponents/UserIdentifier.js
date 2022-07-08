@@ -17,7 +17,7 @@ export default function UserIdentifier({ setUserCreation }) {
           const response = await axios.post(`${url}/users`, {
             name: inputCapture,
           });
-          setUserCreation(response);
+          setUserCreation(response.data);
         } catch {
           setHeader('Error creating user');
         }
