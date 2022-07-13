@@ -3,7 +3,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import url from '../url';
 
-export default function Post({ post, user }) {
+export default function Post({ post, user, setAddedNewComment }) {
   const [directCommentCapture, setDirectCommentCapture] = useState('');
   const [badComment, setBadComment] = useState(false);
   const [notAllowed, setNotAllowed] = useState(false);
@@ -13,7 +13,6 @@ export default function Post({ post, user }) {
     opacity: '0.6',
   };
 
-  console.log(post);
   const handleSubmittingDirectComment = async () => {
     if (!directCommentCapture) {
       setBadComment(true);
@@ -25,9 +24,9 @@ export default function Post({ post, user }) {
         conversation_id: post.id,
         text: directCommentCapture,
       };
-      console.log(comment);
-      const response = await axios.post(`${url}/direct_comments`, comment);
-      console.log(response.data);
+      await axios.post(`${url}/direct_comments`, comment);
+      setTimeout(() => setNotAllowed(false), 800);
+      setAddedNewComment((prev) => prev + 1);
     }
   };
   return (
