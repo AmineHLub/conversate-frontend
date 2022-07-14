@@ -135,7 +135,7 @@ export default function Comments({
         </>
       ) : (
         <div className="no-comments-alert">
-          <h2>
+          <h2 style={{ color: 'white' }}>
             No comments yet.
           </h2>
         </div>
