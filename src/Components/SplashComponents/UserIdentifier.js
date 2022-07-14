@@ -18,6 +18,7 @@ export default function UserIdentifier({ setUserCreation }) {
             name: inputCapture,
           });
           setUserCreation(response.data);
+          localStorage.setItem('user', JSON.stringify(response.data));
         } catch {
           setHeader('Error creating user');
         }
