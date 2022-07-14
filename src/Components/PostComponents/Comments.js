@@ -34,7 +34,7 @@ export default function Comments({
 
   useEffect(() => {
     loadData();
-  }, [addedNewComment, showNestedComments, document.visibilityState]);
+  }, [addedNewComment, showNestedComments, document.visibilityState, directCommentCapture]);
 
   const handleNestedComment = (commentId) => {
     if (commentId === showNestedComments) {
