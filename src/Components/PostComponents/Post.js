@@ -64,6 +64,10 @@ export default function Post({
 
         </button>
       </div>
+      <p className="room-pwd">
+        <strong>Room Password : </strong>
+        {post.password}
+      </p>
     </div>
   );
 }

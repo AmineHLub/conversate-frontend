@@ -34,6 +34,18 @@
   color: hsl(218deg 23% 26%);
 }
 
+.room-pwd {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.574);
+}
+
+.room-pwd strong {
+  color: white;
+}
+
 .post-fixed-container h2 {
   font-family: 'Edu VIC WA NT Beginner', cursive !important;
   font-size: 2rem;
