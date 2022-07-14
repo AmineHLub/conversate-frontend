@@ -6,6 +6,7 @@ import PostScreen from './Components/PostScreen';
 function App() {
   const [userCreation, setUserCreation] = useState(null);
   const [roomStatus, setRoomStatus] = useState(null);
+  document.documentElement.style.setProperty('--vh', `${window.innerHeight / 100}px`);
   return (
     <div className="App">
       {

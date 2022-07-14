@@ -28,7 +28,7 @@ export default function Comments({
       } catch {
         console.log('error');
       }
-      setTimeout(() => loadData(), 10000);
+      setTimeout(() => loadData(), 5000);
     }
   };
 
