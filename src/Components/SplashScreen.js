@@ -15,7 +15,13 @@ export default function SplashScreen({ userCreation, setUserCreation, setRoomSta
   return (
     <main className="splash-screen-main">
       {
-        userCreation ? <RoomIdentifier setRoomStatus={setRoomStatus} userCreation={userCreation} />
+        userCreation ? (
+          <RoomIdentifier
+            setRoomStatus={setRoomStatus}
+            userCreation={userCreation}
+            setUserCreation={setUserCreation}
+          />
+        )
           : <UserIdentifier setUserCreation={setUserCreation} />
       }
     </main>

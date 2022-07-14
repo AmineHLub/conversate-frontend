@@ -61,22 +61,6 @@
   background-color: hsl(218deg 23% 16%);
 }
 
-@media only screen and (min-width: 375px) {
-  .identifier-popup {
-    max-width: 600px;
-    height: 210px;
-  }
-
-  .splash-btn {
-    cursor: pointer;
-  }
-
-  .popup-onloading {
-    background-size: 280px;
-    background-position: 50% 45px;
-  }
-}
-
 /* Room */
 
 .selection-section {
@@ -86,6 +70,14 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.logging-out {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 25px;
+  cursor: pointer;
 }
 
 .selection-seperator-seperator {
@@ -117,38 +109,6 @@
 .room-identifier-join-container button {
   background: inherit;
   border: 2px dotted white;
-}
-
-@media only screen and (min-width: 375px) {
-  .selection-section {
-    flex-direction: row;
-  }
-
-  .selection-seperator-seperator {
-    display: block;
-    min-height: 120px;
-    width: 3px;
-    background-color: hsl(0, 0%, 100%);
-    border-radius: 30px;
-  }
-
-  .room-identifier-join-container {
-    width: 45%;
-  }
-
-  .room-identifier-join-container button {
-    margin-bottom: 10px;
-  }
-
-  .room-identifier-join-container button:hover {
-    border-style: solid;
-  }
-
-  .room-identifier-join-container button:hover,
-  .room-identifier-create-container button:hover {
-    background-color: white;
-    color: hsl(218deg 23% 16%);
-  }
 }
 
 /* post popup */
@@ -205,7 +165,51 @@
 }
 
 @media only screen and (min-width: 375px) {
+  .selection-section {
+    flex-direction: row;
+  }
+
+  .selection-seperator-seperator {
+    display: block;
+    min-height: 120px;
+    width: 3px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 30px;
+  }
+
+  .room-identifier-join-container {
+    width: 45%;
+  }
+
+  .room-identifier-join-container button {
+    margin-bottom: 10px;
+  }
+
+  .room-identifier-join-container button:hover {
+    border-style: solid;
+  }
+
+  .room-identifier-join-container button:hover,
+  .room-identifier-create-container button:hover {
+    background-color: white;
+    color: hsl(218deg 23% 16%);
+  }
+
   .post-popup {
     max-width: 800px;
+  }
+
+  .identifier-popup {
+    max-width: 600px;
+    height: 210px;
+  }
+
+  .splash-btn {
+    cursor: pointer;
+  }
+
+  .popup-onloading {
+    background-size: 280px;
+    background-position: 50% 45px;
   }
 }

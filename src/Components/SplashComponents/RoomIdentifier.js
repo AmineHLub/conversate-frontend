@@ -2,9 +2,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import LoadingSplash from './LoadingSplash';
+import logout from '../../Assets/logout.png';
 import url from '../url';
 
-export default function RoomIdentifier({ setRoomStatus, userCreation }) {
+export default function RoomIdentifier({ setRoomStatus, userCreation, setUserCreation }) {
   const [Loading, setLoading] = useState(false);
   const [postPopup, setPostPopup] = useState(false);
   const [inputCapture, setInputCapture] = useState('');
@@ -59,6 +60,7 @@ export default function RoomIdentifier({ setRoomStatus, userCreation }) {
         {
       !Loading ? (
         <div className="popup-content dflex">
+          <img className="logging-out" aria-hidden onClick={() => { setUserCreation(null); localStorage.removeItem('user'); }} src={logout} alt="logout" />
           <h2>Create or Join a room</h2>
           <div className="selection-section dflex">
             <div className="room-identifier-join-container dflex">
