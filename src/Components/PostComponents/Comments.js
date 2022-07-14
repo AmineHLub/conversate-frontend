@@ -1,12 +1,10 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-undef */
-/* eslint-disable react/no-array-index-key */
 /* eslint-disable react/prop-types */
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import url from '../url';
 import '../../Stylesheets/comments-section.css';
 import arrowbtn from '../../Assets/button-arrow.png';
+import userImg from '../../Assets/userImg.png';
 
 export default function Comments({
   post, user, setAddedNewComment, addedNewComment,
@@ -80,7 +78,7 @@ export default function Comments({
                   }
                   <div className="comment-container dflex">
                     <div className="user-info dflex">
-                      <img className="user-img" src="https://i.picsum.photos/id/237/536/354.jpg?hmac=i0yVXW1ORpyCZpQ-CknuyV-jbtU7_x9EBQVhvT5aRr0" alt="user" />
+                      <img className="user-img" src={userImg} alt="user" />
                     </div>
                     <div className="comment-msg-container">
                       <p>
@@ -99,7 +97,7 @@ export default function Comments({
                    <div key={nestedComment.id} className="nested-comment-container">
                      <div className="nested-comment-container dflex">
                        <div className="nested-user-info dflex">
-                         <img className="nested-user-img" src="https://i.picsum.photos/id/237/536/354.jpg?hmac=i0yVXW1ORpyCZpQ-CknuyV-jbtU7_x9EBQVhvT5aRr0" alt="user" />
+                         <img className="nested-user-img" src={userImg} alt="user" />
                        </div>
                        <div className="nested-comment-msg-container">
                          <p>
