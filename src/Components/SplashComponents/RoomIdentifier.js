@@ -64,7 +64,11 @@ export default function RoomIdentifier({ setRoomStatus, userCreation, setUserCre
           <h2>Create or Join a room</h2>
           <div className="selection-section dflex">
             <div className="room-identifier-join-container dflex">
-              <input placeholder="password" onChange={(e) => setInputCapture(e.target.value)} />
+              <input
+                placeholder="password"
+                onChange={(e) => setInputCapture(e.target.value)}
+                onKeyPress={(e) => e.key === 'Enter' && handleRoomSubmission('join')}
+              />
               <button className="splash-btn" type="button" onClick={() => handleRoomSubmission('join')}>Join</button>
             </div>
             <div className="selection-seperator-seperator" />

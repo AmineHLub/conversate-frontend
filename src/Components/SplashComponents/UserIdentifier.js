@@ -37,7 +37,11 @@ export default function UserIdentifier({ setUserCreation }) {
       !Loading ? (
         <div className="popup-content dflex">
           <h2>Nicknames are fine, titles are discouraged</h2>
-          <input placeholder="username..." onChange={(e) => setInputCapture(e.target.value)} />
+          <input
+            placeholder="username..."
+            onChange={(e) => setInputCapture(e.target.value)}
+            onKeyPress={(e) => e.key === 'Enter' && createUsername()}
+          />
           <button className="splash-btn" type="button" onClick={() => createUsername()}>Create</button>
         </div>
       ) : <LoadingSplash header={header} />
