@@ -3,7 +3,9 @@ import { useState } from 'react';
 import axios from 'axios';
 import url from '../url';
 
-export default function Post({ post, user, setAddedNewComment }) {
+export default function Post({
+  post, user, setAddedNewComment, setRoomStatus,
+}) {
   const [directCommentCapture, setDirectCommentCapture] = useState('');
   const [badComment, setBadComment] = useState(false);
   const [notAllowed, setNotAllowed] = useState(false);
@@ -27,10 +29,20 @@ export default function Post({ post, user, setAddedNewComment }) {
       await axios.post(`${url}/direct_comments`, comment);
       setTimeout(() => setNotAllowed(false), 800);
       setAddedNewComment((prev) => prev + 1);
+      setDirectCommentCapture('');
+      if (window.screen.width >= 600) {
+        if (document.querySelectorAll('.full-comment').length > 2) {
+          const fullComment = document.querySelectorAll('.full-comment');
+          fullComment[fullComment.length - 1].scrollIntoView();
+        } else {
+          document.querySelector('.comments-container').scrollIntoView();
+        }
+      }
     }
   };
   return (
     <div className="post-fixed-container">
+      <button className="go-back-button" type="button" onClick={() => setRoomStatus(null)}>➜</button>
       <h2>
         {post.text}
       </h2>
@@ -38,6 +50,7 @@ export default function Post({ post, user, setAddedNewComment }) {
         <textarea
           className={badComment ? 'wrong-comment-txt' : null}
           type="text"
+          value={directCommentCapture}
           placeholder="Type a comment..."
           onChange={(e) => setDirectCommentCapture(e.target.value)}
         />

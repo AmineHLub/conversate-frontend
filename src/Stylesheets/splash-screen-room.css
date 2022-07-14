@@ -157,6 +157,19 @@
   align-self: flex-end;
 }
 
+.close-popup-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: inherit;
+  border: 2px solid white;
+  cursor: pointer;
+  color: white;
+}
+
 .submit-post.inactive {
   cursor: not-allowed;
   color: hsl(0, 0%, 66%);

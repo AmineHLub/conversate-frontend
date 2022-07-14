@@ -1,3 +1,4 @@
+
 .post-fixed-container {
   position: fixed;
   top: 0;
@@ -10,9 +11,31 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.go-back-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  transform: rotate(180deg);
+  color: white;
+  background-color: inherit;
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.go-back-button:hover {
+  background-color: white;
+  color: hsl(218deg 23% 26%);
 }
 
 .post-fixed-container h2 {
+  font-family: 'Edu VIC WA NT Beginner', cursive !important;
+  font-size: 2rem;
   margin: auto;
 }
 
@@ -62,11 +85,12 @@
 }
 
 .comments-container {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 40%;
   right: 0;
-  min-height: 100vh;
+  height: 100vh;
+  overflow: auto;
   box-sizing: border-box;
   padding: 20px;
 }
@@ -104,4 +128,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .post-fixed-container {
+    position: absolute;
+    width: 100%;
+  }
+
+  .comments-container {
+    position: absolute;
+    overflow: hidden;
+    top: 100%;
+    left: 0;
+    min-height: 100vh;
+    height: auto;
+    width: 100%;
+  }
 }

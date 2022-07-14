@@ -15,7 +15,13 @@ function App() {
             setUserCreation={setUserCreation}
             setRoomStatus={setRoomStatus}
           />
-        ) : <PostScreen roomStatus={roomStatus} userCreation={userCreation} />
+        ) : (
+          <PostScreen
+            roomStatus={roomStatus}
+            userCreation={userCreation}
+            setRoomStatus={setRoomStatus}
+          />
+        )
       }
     </div>
   );

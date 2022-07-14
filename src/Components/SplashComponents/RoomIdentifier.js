@@ -77,6 +77,7 @@ export default function RoomIdentifier({ setRoomStatus, userCreation }) {
       {
         postPopup ? (
           <div className="post-popup">
+            <button type="button" className="close-popup-btn" onClick={() => setPostPopup(false)}>x</button>
             <div className="popup-content postpopup-container dflex">
               <h2>Post</h2>
               <textarea value={postCapture} onChange={(e) => setPostCapture(e.target.value)} />
