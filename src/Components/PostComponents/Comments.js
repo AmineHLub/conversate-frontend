@@ -21,15 +21,13 @@ export default function Comments({
   };
 
   const loadData = async () => {
-    if (document.visibilityState === 'visible') {
-      try {
-        const response = await axios.post(`${url}/reciption`, { password: post.password });
-        setData(response.data);
-      } catch {
-        console.log('error');
-      }
-      setTimeout(() => loadData(), 5000);
+    try {
+      const response = await axios.post(`${url}/reciption`, { password: post.password });
+      setData(response.data);
+    } catch {
+      console.log('error');
     }
+    setTimeout(() => loadData(), 5000);
   };
 
   useEffect(() => {

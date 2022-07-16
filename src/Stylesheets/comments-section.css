@@ -45,6 +45,8 @@
   background-color: rgb(63, 77, 102);
   padding: 8px 10px;
   border-radius: 10px;
+  word-wrap: break-word;
+  width: 80%;
 }
 
 .nested-comment-container {
