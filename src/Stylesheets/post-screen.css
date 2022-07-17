@@ -50,6 +50,10 @@
   font-family: 'Edu VIC WA NT Beginner', cursive !important;
   font-size: 2rem;
   margin: auto;
+  padding: 10px 10px 20px 10px;
+  overflow: auto;
+  word-wrap: break-word;
+  text-align: center;
 }
 
 .post-fixed-container div.direct-cmnt-container {

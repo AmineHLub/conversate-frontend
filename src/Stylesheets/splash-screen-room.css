@@ -38,16 +38,61 @@
   background-size: 220px;
 }
 
-.popup-content > input {
-  width: 95%;
+.popup-content .input-img {
+  position: relative;
+  width: 100%;
+  margin: 10px 0;
+  align-items: center;
+}
+
+.input-img input {
+  width: 100%;
   height: 50px;
   border-radius: 7px;
   border: none;
   outline: none;
   font-family: Manrope, sans-serif;
   font-size: 1.2rem;
-  margin: 10px 0;
   padding: 0 20px;
+}
+
+.input-img img {
+  margin-right: 10px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.moji-popup {
+  position: absolute;
+  bottom: 60px;
+  left: 10px;
+  min-width: 220px;
+  max-width: 460px;
+  max-height: 250px;
+  background-color: hsl(159deg 40% 24% / 65%);
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+  overflow-x: hidden;
+  padding: 5px;
+}
+
+.moji-popup::-webkit-scrollbar-thumb {
+  background-color: rgb(58, 133, 107);
+}
+
+.moji-popup .moji-container {
+  width: 10%;
+  min-width: 50px;
+  padding: 2.5px;
+}
+
+.moji-container img {
+  border-radius: 50%;
+  width: 100%;
 }
 
 .splash-btn {
@@ -164,6 +209,7 @@
   font-size: 1rem;
   background: white;
   outline: none;
+  resize: none;
 }
 
 @media only screen and (min-width: 375px) {

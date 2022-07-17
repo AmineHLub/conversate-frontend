@@ -4,7 +4,6 @@ import axios from 'axios';
 import url from '../url';
 import '../../Stylesheets/comments-section.css';
 import arrowbtn from '../../Assets/button-arrow.png';
-import userImg from '../../Assets/userImg.png';
 
 export default function Comments({
   post, user, setAddedNewComment, addedNewComment,
@@ -76,12 +75,12 @@ export default function Comments({
                   }
                   <div className="comment-container dflex">
                     <div className="user-info dflex">
-                      <img className="user-img" src={userImg} alt="user" />
+                      <img className="user-img" src={JSON.parse(comment.direct_comment.username).img} alt="user" />
                     </div>
                     <div className="comment-msg-container">
                       <p>
                         <strong>
-                          {comment.direct_comment.username}
+                          {JSON.parse(comment.direct_comment.username).name}
                           :
                           {' '}
                         </strong>
@@ -95,12 +94,12 @@ export default function Comments({
                    <div key={nestedComment.id} className="nested-comment-container">
                      <div className="nested-comment-container dflex">
                        <div className="nested-user-info dflex">
-                         <img className="nested-user-img" src={userImg} alt="user" />
+                         <img className="nested-user-img" src={JSON.parse(nestedComment.username).img} alt="user" />
                        </div>
                        <div className="nested-comment-msg-container">
                          <p>
                            <strong>
-                             {nestedComment.username}
+                             {JSON.parse(nestedComment.username).name}
                              :
                              {' '}
                            </strong>
