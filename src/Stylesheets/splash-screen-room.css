@@ -5,6 +5,10 @@
   right: 0;
   bottom: 0;
   background-color: hsl(218, 23%, 16%);
+  background-image: url(https://i.ibb.co/j5kLP6T/conversate-logo.png);
+  background-repeat: no-repeat;
+  background-size: 110px;
+  background-position: 50% 10%;
 }
 
 .identifier-popup {

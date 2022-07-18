@@ -145,6 +145,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url(https://i.ibb.co/j5kLP6T/conversate-logo.png);
+  background-repeat: no-repeat;
+  background-size: 200px;
+  background-position: 50% 10px;
 }
 
 @media only screen and (max-width: 600px) {
