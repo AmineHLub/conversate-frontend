@@ -1,3 +1,3 @@
-const url = 'https://0b31-197-3-93-212.eu.ngrok.io';
+const url = 'https://sleepy-forest-02907.herokuapp.com';
 
 export default url;
